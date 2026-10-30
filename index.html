@@ -4,81 +4,151 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Privacy Policy — Goetic Companion</title>
+<meta name="description" content="Privacy policy for Goetic Companion. No personal data collected, no accounts, nothing shared or sold.">
+<meta name="theme-color" content="#0A0806">
+
+<link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="img/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Inter:wght@400;500&display=swap">
+
 <style>
   :root {
-    color-scheme: light dark;
-    --bg: #fdfcfb;
-    --fg: #1d1a17;
-    --muted: #5c564e;
-    --rule: #e4ddd3;
-    --accent: #8a6d3b;
+    /* Sampled from the app icon: ground #0A0806, mark #C9A24A. */
+    --bg:      #0A0806;
+    --surface: #120E0A;
+    --fg:      #ECE6DC;   /* 16.1:1 on --bg */
+    --muted:   #B5AA98;   /*  8.7:1 on --bg */
+    --gold:    #C9A24A;   /*  8.3:1 on --bg */
+    --gold-hi: #E0BC68;   /* 11.0:1 on --bg */
+    --rule:    rgba(201, 162, 74, 0.18);
+    --serif: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+    --sans: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   }
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --bg: #15120f;
-      --fg: #ece6dc;
-      --muted: #b3a995;
-      --rule: #332c23;
-      --accent: #cbab6f;
-    }
-  }
+
   * { box-sizing: border-box; }
-  html, body {
+
+  html {
+    background: var(--bg);
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
     margin: 0;
-    padding: 0;
     background: var(--bg);
     color: var(--fg);
-  }
-  body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    line-height: 1.6;
+    font-family: var(--sans);
     font-size: 17px;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
+
   main {
     max-width: 640px;
     margin: 0 auto;
-    padding: 2rem 1.25rem 4rem;
+    padding: 0 1.5rem;
   }
+
+  a {
+    color: var(--gold);
+    text-decoration-color: var(--rule);
+    text-underline-offset: 0.2em;
+    transition: color 120ms ease;
+  }
+  a:hover { color: var(--gold-hi); }
+  a:focus-visible {
+    outline: 2px solid var(--gold-hi);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  .masthead {
+    text-align: center;
+    padding: clamp(2.5rem, 9vw, 4rem) 0 clamp(1.75rem, 5vw, 2.5rem);
+  }
+
+  .masthead svg {
+    width: clamp(52px, 12vw, 66px);
+    height: auto;
+    display: block;
+    margin: 0 auto 1.25rem;
+  }
+
+  .masthead .site {
+    font-family: var(--serif);
+    font-size: 1.15rem;
+    letter-spacing: 0.04em;
+    color: var(--muted);
+    text-decoration: none;
+  }
+  .masthead .site:hover { color: var(--gold-hi); }
+
   h1 {
-    font-size: 1.6rem;
-    margin-bottom: 0.25rem;
+    font-family: var(--serif);
+    font-weight: 600;
+    font-size: clamp(1.9rem, 7vw, 2.6rem);
+    line-height: 1.15;
+    margin: clamp(1.75rem, 5vw, 2.5rem) 0 0.4rem;
   }
+
   .effective-date {
     color: var(--muted);
-    font-size: 0.95rem;
-    margin-top: 0;
-    margin-bottom: 2rem;
+    font-size: 0.92rem;
+    letter-spacing: 0.02em;
+    margin: 0 0 2.5rem;
   }
+
   h2 {
-    font-size: 1.1rem;
-    margin-top: 2.2rem;
-    margin-bottom: 0.5rem;
+    font-family: var(--serif);
+    font-weight: 600;
+    font-size: clamp(1.3rem, 4.5vw, 1.55rem);
+    line-height: 1.25;
+    margin: 2.75rem 0 0.6rem;
+    padding-top: 1.75rem;
     border-top: 1px solid var(--rule);
-    padding-top: 1.4rem;
   }
-  p {
-    margin: 0.8rem 0;
-  }
-  a {
-    color: var(--accent);
-  }
+
+  p { margin: 0 0 1rem; }
+
+  strong { font-weight: 500; color: var(--fg); }
+
+  /* The lead paragraphs, before the first rule. */
+  .lead { color: var(--fg); }
+
   footer {
     margin-top: 3rem;
-    padding-top: 1.2rem;
+    padding: 1.75rem 0 clamp(3rem, 8vw, 4.5rem);
     border-top: 1px solid var(--rule);
+    text-align: center;
     color: var(--muted);
     font-size: 0.9rem;
   }
+  footer p { margin: 0 0 0.55rem; }
 </style>
 </head>
 <body>
 <main>
+
+  <div class="masthead">
+    <svg viewBox="24 17.25 60 60" role="img" aria-label="Cavae Inanis Labs mark">
+      <path d="M 54,27 L 77.383,67.5 L 30.617,67.5 Z" fill="none"
+            stroke="#C9A24A" stroke-width="2.4" stroke-linejoin="round"/>
+      <circle cx="54" cy="54" r="7.695" fill="none"
+              stroke="#C9A24A" stroke-width="2.4"/>
+    </svg>
+    <a class="site" href="https://cavaeinanis-tech.github.io/">Cavae Inanis Labs</a>
+  </div>
+
   <h1>Privacy Policy for Goetic Companion</h1>
   <p class="effective-date">Effective date: October 30, 2026</p>
 
-  <p>Goetic Companion does not collect any personal data. There's no account and no sign-in, there's no server belonging to the developer that the app talks to, and there's no analytics, no crash reporting, no advertising, and no third-party tracking of any kind. Nothing you write or do in the app is sent anywhere, and nothing about you is ever shared or sold.</p>
+  <p class="lead">Goetic Companion does not collect any personal data. There's no account and no sign-in, there's no server belonging to the developer that the app talks to, and there's no analytics, no crash reporting, no advertising, and no third-party tracking of any kind. Nothing you write or do in the app is sent anywhere, and nothing about you is ever shared or sold.</p>
 
-  <p>The app does include one in-app purchase, which is handled by Google Play. That's described in full under <a href="#purchases">In-app purchase</a> below.</p>
+  <p class="lead">The app does include one in-app purchase, which is handled by Google Play. That's described in full under <a href="#purchases">In-app purchase</a> below.</p>
 
   <h2>What the app stores</h2>
   <p>Your Journal entries, favorites, and settings (like night mode or text size) are stored only on your device, in a private local database. So is the record that you've bought the unlock, if you have. The developer never receives any of this information. There's no account and no sign-in.</p>
@@ -112,7 +182,11 @@
   <h2>Contact</h2>
   <p><a href="mailto:cavae.inanis@gmail.com">cavae.inanis@gmail.com</a></p>
 
-  <footer>Goetic Companion — privacy policy</footer>
+  <footer>
+    <p><a href="https://cavaeinanis-tech.github.io/">Cavae Inanis Labs</a></p>
+    <p>© 2026 Cavae Inanis Labs</p>
+  </footer>
+
 </main>
 </body>
 </html>
